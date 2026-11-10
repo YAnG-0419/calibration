@@ -16,7 +16,7 @@ export FASTRTPS_DEFAULT_PROFILES_FILE=/opt/ros-bringup/fastdds_config_udp_only.x
 /usr/bin/python3 zhuji_board_align.py ros \
   --image-topic /camera/top/color/image_raw \
   --info-topic /camera/top/color/camera_info \
-  --camera-id tron2_top --out results/target --timeout 120
+  --camera-id zhuji --out results/zhuji --timeout 120
 ```
 
 5. 两侧真实观测齐备后生成从源 RGB 光学坐标到目标 RGB 光学坐标的矩阵：
@@ -24,7 +24,7 @@ export FASTRTPS_DEFAULT_PROFILES_FILE=/opt/ros-bringup/fastdds_config_udp_only.x
 ```bash
 /usr/bin/python3 zhuji_board_align.py align \
   --source results/franka-sharpa/observation.json \
-  --target results/target/observation.json \
+  --target results/zhuji/observation.json \
   --out results/task_mapping.json
 ```
 

@@ -1,7 +1,7 @@
 {
   ".gitignore": "cd0a2d4947cd03fd85d0c580bf060cd032b08e0d0f8959d2c02d11ee2f59a4b9",
-  "README.md": "0f99d4c0dc99abff2be0a12709a40c06705629cb1bd681dbf7bcc9994f21b85a",
-  "ZHUJI.md": "f4a5cd134083a483c367c5f86c8731e0e763c19ed6f3c618b04f2ecdaa4d6533",
+  "README.md": "f4c9e729eb74d0455a0751f00b24e621e950345a9d2e5122e91a2e6c8f65f6c0",
+  "ZHUJI.md": "f03aff8148d0c46664afd63ead4cbbf113aaa2a91c7be42bf406e1a289185905",
   "board/board.json": "737e14dea68fd2cb18af0ec8c51f4823a4dad4866601ce8ae13ffb617f9d8e62",
   "board/board_actual_size.svg": "0783eb0a3f2260e9c5ba0128178db8a4002f58cf04208bd2940d67a154d34107",
   "board/board_reference.png": "7a007179a4974e014b740c4b1e73028cb79ae36d2460c5b00ce3b98af7f1c18f",
@@ -16,6 +16,8 @@
   "example_synthetic/target/overlay.jpg": "9c5a010e4e871c2a88f5f9bc8901a9052b5b320365cc5e5029f10eabb67a5b5f",
   "example_synthetic/target/samples.json": "9c874ec1b211a5c7fb318d2e0123be8b209493227b4dae21b640f323bce6e740",
   "example_synthetic/task_mapping.json": "b06eb7939186b1f45acf1bfe6d920ef932e17ff4313c9f63f6c54dbb672670d7",
+  "observations/franka-sharpa/observation.json": "d39cf97cc21696b0ff0a0e53047600c20127c196a869f09a8f3ee3e8116e7b55",
+  "observations/zhuji/observation.json": "e729a0f1bd564e5b333e9b932eec61be73a9e26e882792230932b5f2f622648e",
   "observe_ros2.py": "b726da0106bbd245aba94fb6e1742ca9d5515e2037239bae7366587ed739ffb5",
   "requirements.txt": "4534e129ecc526f7cadd1d085778641d325f2864b7ed47ebd3d3c5857545fbca",
   "validation.json": "70cd2469c49e51e72508367eb5698886a36c3f475df1b04560022909a8eb7658",

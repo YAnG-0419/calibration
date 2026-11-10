@@ -71,7 +71,7 @@ source /opt/ros/jazzy/setup.bash
 
 每台相机用自己的内参，且图像分辨率、裁剪和去畸变状态必须匹配。支持普通 JSON、ROS 相机标定 YAML，以及本项目旧 `handeye_calibration.json` 的 `camera_intrinsics` 字段。
 
-两台相机分别使用各自当前彩色图像配置对应的内参。实机内参和现场采集结果由各工位本地保存。
+两台相机分别使用各自当前彩色图像配置对应的内参。
 
 ```bash
 python3 board_align.py observe \
@@ -137,6 +137,17 @@ T_target_base_wuji = T_target_base_target_camera @ T_target_camera_wuji
 当前转换包的 `wuji_motion_scene.npz` 属于原装配模型世界系，**不能直接当成 `T_source_camera_wuji`**；需要先借助原手眼标定转换到原相机系。已有的左手 +90°、右手 −90° 修正不要重复添加。本工具目前只生成板观测与场景映射，不会直接修改轨迹、求机械臂 IK 或执行机器人。
 
 这里定义的是两地**对应任务坐标系**之间的映射，不是测量两栋房间中相机的物理距离。若板在两处相对物体有 1 cm 摆放差，任务映射也会带入相应偏差。
+
+## 已归档观测与新增设备
+
+当前实机板观测位于 [observations/](observations/)。[zhuji](observations/zhuji/observation.json) 和 [franka-sharpa](observations/franka-sharpa/observation.json) 各有一份观测。等待其他设备采集完成后统一计算映射。
+
+### 新设备交付清单
+
+1. 为设备选定一个唯一名称，例如 `robot-c`。沿用同一块板或同款板，按相对各自托盘或工作台的对应位置、朝向和图案面高度摆放。板和相机在本次采集期间保持固定。若相机装在可动机构上，记录采集姿态，以便复现。
+2. 用该相机自己的彩色原图和配套内参采集。ROS 2 采集用 `--camera-id robot-c --out results/robot-c`，默认保存 30 帧稳定观测。照片模式交付原始彩色图和同分辨率的内参（宽高、K、D、畸变模型和光学坐标系），由脚本生成同格式的观测。
+3. **每台设备必交一份 `observation.json`。** 文件应包含设备名、板型及其指纹、`camera_T_board` 和逆变换、相机内参、样本数与质量统计。归档路径为 `observations/<设备名>/observation.json`。原图 `image.png`、角点叠加图 `overlay.jpg` 和逐帧 `samples.json` 留在采集主机用于复核。
+4. 如果最终还要把坐标转换到某台机器人的基座，另外准备该设备与采集姿态匹配的相机到基座外参，并注明坐标系和姿态。只对齐相机光学坐标系时，各设备的板观测即可。
 
 ## 保存的文件与检查
 

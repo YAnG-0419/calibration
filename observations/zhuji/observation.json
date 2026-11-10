@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-10T13:45:01.596116+00:00",
+  "opencv_version": "4.2.0",
+  "camera_id": "zhuji",
+  "image_source": "/camera/top/color/image_raw",
+  "convention": "A_T_B maps B to A; metres; column vectors; optical camera +X right +Y down +Z forward",
+  "board_axes": "origin at top-left outer board corner in reference image; +X right, +Y down printed board, +Z into board",
+  "board_config": {
+    "squares": [
+      14,
+      9
+    ],
+    "square_m": 0.02,
+    "marker_m": 0.015,
+    "dictionary": "DICT_5X5_250",
+    "legacy_pattern": true
+  },
+  "board_fingerprint": "437d28755b5102513fd2204b356c468f7d9618172b30ba59d7d60f049d63d928",
+  "camera_intrinsics": {
+    "width": 640,
+    "height": 480,
+    "K": [
+      [
+        388.94683837890625,
+        0.0,
+        326.43572998046875
+      ],
+      [
+        0.0,
+        388.0251770019531,
+        242.3768768310547
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "D": [
+      -0.05416286736726761,
+      0.056861527264118195,
+      0.0009839670965448022,
+      0.0003474352415651083,
+      -0.01834084279835224
+    ],
+    "distortion_model": "plumb_bob",
+    "frame_id": "top_color_optical_frame"
+  },
+  "camera_T_board": [
+    [
+      0.999930744307904,
+      -0.010804911152829494,
+      0.004664813267502986,
+      -0.1680539994095937
+    ],
+    [
+      0.003831239284070242,
+      0.6736321953421691,
+      0.7390568225813481,
+      0.16001307020980718
+    ],
+    [
+      -0.011127811707133521,
+      -0.7389877666737585,
+      0.6736269386783323,
+      0.6802045952690453
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "board_T_camera": [
+    [
+      0.999930744307904,
+      0.003831239284070242,
+      -0.011127811707133521,
+      0.17499850101148348
+    ],
+    [
+      -0.010804911152829494,
+      0.6736321953421691,
+      -0.7389877666737585,
+      0.39305711043772823
+    ],
+    [
+      0.004664813267502986,
+      0.7390568225813481,
+      0.6736269386783323,
+      -0.5756789499006645
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "sample_count": 30,
+  "quality": {
+    "reprojection_rms_px_mean": 0.05289260869224866,
+    "reprojection_rms_px_max": 0.15380842983722687,
+    "translation_spread_max_mm": 1.09164619025237,
+    "rotation_spread_max_deg": 0.32303262956819867,
+    "min_inlier_corners": 20
+  },
+  "notes": [
+    "Stability and reprojection are internal checks, not absolute accuracy guarantees.",
+    "Between separate sites, corresponding board placement defines the intended task mapping.",
+    "This observation does not recalibrate robot hand-eye transforms.",
+    "Perspective normalization and channel sharpening assisted marker decoding. ChArUco refinement and PnP used native-resolution pixels and live CameraInfo. Intermittent failed detections were screened; 30 accepted poses passed the original 3 mm / 1 degree stability limits."
+  ]
+}

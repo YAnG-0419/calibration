@@ -1,0 +1,10 @@
+{
+  "squares": [
+    14,
+    9
+  ],
+  "square_m": 0.02,
+  "marker_m": 0.015,
+  "dictionary": "DICT_5X5_250",
+  "legacy_pattern": true
+}

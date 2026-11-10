@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-10T07:18:57.699136+00:00",
+  "board_fingerprint": "437d28755b5102513fd2204b356c468f7d9618172b30ba59d7d60f049d63d928",
+  "target_camera_T_source_camera": [
+    [
+      0.9331956285548764,
+      0.1818830707833321,
+      0.3099426840699673,
+      -0.17988098407029873
+    ],
+    [
+      -0.10856773321379339,
+      0.9648519409699988,
+      -0.23931940855527076,
+      0.14898119460683606
+    ],
+    [
+      -0.3425769492404425,
+      0.1896820512564417,
+      0.9201422462208003,
+      0.12546783629053415
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "source_camera_T_target_camera": [
+    [
+      0.9331956285548764,
+      -0.10856773321379339,
+      -0.3425769492404425,
+      0.2270210871687098
+    ],
+    [
+      0.1818830707833321,
+      0.9648519409699988,
+      0.1896820512564417,
+      -0.13482648558049726
+    ],
+    [
+      0.3099426840699673,
+      -0.23931940855527076,
+      0.9201422462208003,
+      -0.024041370317774625
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "formula": "T_target_camera_wuji = target_camera_T_source_camera @ T_source_camera_wuji",
+  "assumption": "The two observed board frames represent corresponding task origins and axes; identity mapping between those task frames is user-established by physical placement.",
+  "interpretation": "Task-transfer mapping between separate workcells, not a surveyed inter-site physical camera extrinsic.",
+  "source_camera_id": "SYNTHETIC_source",
+  "target_camera_id": "SYNTHETIC_target",
+  "source_quality": {
+    "reprojection_rms_px_mean": 0.4056393802165985,
+    "reprojection_rms_px_max": 0.4056393802165985,
+    "translation_spread_max_mm": 0.0,
+    "rotation_spread_max_deg": 0.0,
+    "min_inlier_corners": 104
+  },
+  "target_quality": {
+    "reprojection_rms_px_mean": 0.3876502811908722,
+    "reprojection_rms_px_max": 0.3876502811908722,
+    "translation_spread_max_mm": 0.0,
+    "rotation_spread_max_deg": 0.0,
+    "min_inlier_corners": 102
+  },
+  "same_board_coordinate_closure_max_abs": 5.551115123125783e-16
+}

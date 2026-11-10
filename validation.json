@@ -1,0 +1,51 @@
+{
+  "synthetic_only": true,
+  "opencv_versions_tested": [
+    "4.6.0",
+    "4.11.0"
+  ],
+  "known_pose_tests": {
+    "source": {
+      "translation_error_mm": 0.8321447788437096,
+      "rotation_error_deg": 0.06397485603925387,
+      "reprojection_rms_px": 0.4056393802165985,
+      "opencv46_translation_error_mm": 0.8321448029718361,
+      "opencv46_rotation_error_deg": 0.06397485257547739
+    },
+    "target": {
+      "translation_error_mm": 0.4996637865625161,
+      "rotation_error_deg": 0.1860665650733671,
+      "reprojection_rms_px": 0.3876502811908722,
+      "opencv46_translation_error_mm": 0.4965691917102038,
+      "opencv46_rotation_error_deg": 0.20797523253696282
+    }
+  },
+  "mapping_translation_error_mm": 2.551500951545765,
+  "mapping_rotation_error_deg": 0.19955323982983653,
+  "checks": [
+    "matched pattern across versions",
+    "known pose and axes",
+    "mapping direction and closure",
+    "reject image size mismatch",
+    "reject absent board",
+    "reject mismatched board definitions",
+    "reject moving board in stable window"
+  ],
+  "real_camera_validation_performed": false,
+  "nonzero_distortion_test": {
+    "translation_error_mm": 0.875252455863003,
+    "rotation_error_deg": 0.07532322553698817,
+    "passed": true
+  },
+  "ros2_synthetic_topic_integration": {
+    "passed": true,
+    "sample_count": 6,
+    "domain": 213,
+    "localhost_only": true,
+    "real_hardware_used": false
+  },
+  "ros_camera_info_validation": {
+    "passed": true,
+    "fisheye_rejected": true
+  }
+}
